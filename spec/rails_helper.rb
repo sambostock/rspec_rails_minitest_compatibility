@@ -45,7 +45,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # # Found in RSpec::Rails::FixtureSupport
+  # config.extend ActiveSupport::Concern
+  # config.include RSpec::Rails::SetupAndTeardownAdapter
   config.include RSpec::Rails::MinitestLifecycleAdapter
+  # config.include RSpec::Rails::MinitestAssertionAdapter
+  # config.include ActiveRecord::TestFixtures
 
   config.include ActiveSupport::Testing::TimeHelpers
 end
